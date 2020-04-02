@@ -19,4 +19,4 @@ To set this script up to run time-based follow these instructions, from the Goog
 6. Choose your failure notification settings - this is an e-mail sent to the sheets file owner upon failure
 
 Here is an example of a trigger to run once every minute.
-![image](https://imgur.com/qJnW0DF)
+![API Fetch - Project Triggers - Apps Script 2020-04-02 15-47-14](https://user-images.githubusercontent.com/26964971/78257524-3fd82f80-74fa-11ea-8d11-1ebead1719ec.png)
