@@ -1,0 +1,20 @@
+// URL to poll eg: "https://api.optimizely.com/v2/experiments/17784160323?project_id=112699136"
+var url = ""
+// Your bearer token (personal access token generated in Optimizely)
+var token = ""
+// headers to include, should work by default
+var headers = {
+    "contentType": "application/json",
+    "headers":{"Authorization": "Bearer " + token}
+    };
+
+function callOpti() {
+// Logs details regarding the last response from API
+    var response = UrlFetchApp.fetch(url, headers);
+    var responseCode = response.getResponseCode();
+    Logger.log(responseCode);
+    Logger.log(response);
+// Takes response and logs it to active Google Sheet on next blank cell row
+    var sheet = SpreadsheetApp.getActiveSheet();
+    sheet.getRange(sheet.getLastRow() + 1,1).setValue([response]);
+}
